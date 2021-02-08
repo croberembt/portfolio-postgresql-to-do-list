@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react'; 
 import { Table, Button } from 'reactstrap'; 
+import EditComponent from './EditComponent'; 
 
 const ListComponent = () => {
 
@@ -21,9 +22,10 @@ const ListComponent = () => {
 
   const deleteTodo = async (id) => {
     try {
-      const deleteTodo = await fetch (`http://localhost:500/todolist/${id}`, {
+      await fetch (`http://localhost:5000/todolist/${id}`, {
         method: 'DELETE'
       }); 
+      setTodos(todos.filter(item => item.todo_id !== id));
     } catch (err) {
       console.error(err); 
     }
@@ -49,7 +51,7 @@ const ListComponent = () => {
                 <Button color='warning' style={{fontWeight: 'bold', color: '#1F1E1A'}}
                  
                 >
-                  Edit
+                  <EditComponent /> 
                 </Button>
               </td>
               <td>
