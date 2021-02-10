@@ -48,11 +48,7 @@ const ListComponent = () => {
             <tr key={item.todo_id}>
               <td>{item.description}</td>
               <td>
-                <Button color='warning' style={{fontWeight: 'bold', color: '#1F1E1A'}}
-                 
-                >
                   <EditComponent /> 
-                </Button>
               </td>
               <td>
                 <Button color='success' style={{fontWeight: 'bold', color: '#1F1E1A'}}
