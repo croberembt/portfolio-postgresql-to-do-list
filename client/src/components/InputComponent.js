@@ -26,7 +26,7 @@ const InputComponent = () => {
     <div className='container'>
       <h2 className='text-center' style={{color: 'white'}}>To Do List</h2>
       <Form className='d-flex' style={{marginTop: '1rem'}} onSubmit={onSubmitForm}>
-            <Input type='text' style={{fontWeight: 'bold', color: '#1F1E1A'}} value={description} 
+            <Input type='text' style={{fontWeight: 'bold', color: '#1F1E1A'}} value={description} placeholder='Add your task here...'
               onChange={event => setDescription(event.target.value)}
               /> 
             <Button color='warning' style={{fontWeight: 'bold', color: '#1F1E1A'}}>Add</Button>
