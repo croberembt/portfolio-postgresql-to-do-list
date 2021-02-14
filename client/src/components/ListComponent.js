@@ -8,7 +8,7 @@ const ListComponent = () => {
 
   const getTodos = async () => {
     try {
-      const response = await fetch('http://localhost:5000/todolist');
+      const response = await fetch('/todolist');
       const jsonData = await response.json(); 
       setTodos(jsonData); 
     } catch (err) {
@@ -22,7 +22,7 @@ const ListComponent = () => {
 
   const deleteTodo = async (id) => {
     try {
-      await fetch (`http://localhost:5000/todolist/${id}`, {
+      await fetch (`/todolist/${id}`, {
         method: 'DELETE'
       }); 
       setTodos(todos.filter(item => item.todo_id !== id));

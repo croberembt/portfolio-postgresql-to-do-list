@@ -9,7 +9,7 @@ const InputComponent = () => {
     event.preventDefault(); 
     try {
       const body = { description }; 
-      await fetch('http://localhost:5000/todolist', {
+      await fetch('/todolist', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json',

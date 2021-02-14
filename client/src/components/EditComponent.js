@@ -9,8 +9,11 @@ const EditComponent = ({ item }) => {
   const editTodo = async (event) => {
     event.preventDefault(); 
     try {
+
+
+
       const body = { description };
-      await fetch(`http://localhost:5000/todolist/${item.todo_id}`, {
+      await fetch(`/todolist/${item.todo_id}`, {
         method: 'PUT',
         headers: {
           'Content-type': 'application/json'
