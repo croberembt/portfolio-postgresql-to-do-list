@@ -97,3 +97,7 @@ app.delete('/todolist/:id', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`server is listening on port ${PORT}`);
 }); 
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build/index.html')); 
+})
