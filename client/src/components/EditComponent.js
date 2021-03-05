@@ -9,9 +9,6 @@ const EditComponent = ({ item }) => {
   const editTodo = async (event) => {
     event.preventDefault(); 
     try {
-
-
-
       const body = { description };
       await fetch(`/todolist/${item.todo_id}`, {
         method: 'PUT',
