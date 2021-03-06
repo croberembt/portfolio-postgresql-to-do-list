@@ -92,12 +92,12 @@ app.delete('/todolist/:id', async (req, res) => {
   } catch (err) {
     console.error(err.message); 
   }
-})
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build/index.html')); 
+});
 
 app.listen(PORT, () => {
   console.log(`server is listening on port ${PORT}`);
 }); 
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build/index.html')); 
-})
